@@ -72,13 +72,15 @@
 
 ### B-2. 단계별 진행 (Step by Step)
 
-#### Phase 0. 준비 (착수 전)
+> 📂 **각 Phase의 세부 진행 아이템·참고자료·의미 설명은 [단계별_가이드/](단계별_가이드/README.md) 폴더에 파일로 정리되어 있습니다.** 아래 각 Phase 제목을 클릭하면 상세 문서로 이동합니다.
+
+#### [Phase 0. 준비 (착수 전)](단계별_가이드/00_준비.md)
 - [ ] 이해관계자(Stakeholder) 목록 확정: 고객, 매장 직원, 매장 관리자, 시스템 관리자, 외부 결제사, 외부 알림사, AI 운영자
 - [ ] 요구사항 팀 전원 정독 (특히 2·3·4장)
 - [ ] 산출물 저장 위치·네이밍·버전 규칙 합의
 - [ ] **3인 역할 분담 확정** (아래 Part C)
 
-#### Phase 1. 요구공학 실습 (4.1) — ★ Architectural Driver 35%의 원천
+#### [Phase 1. 요구공학 실습 (4.1)](단계별_가이드/01_요구공학.md) — ★ Architectural Driver 35%의 원천
 목표: 🎓 인증과제 3장에 들어갈 **QA Scenario 명세** 완성.
 1. **[EX-1] 요구사항 도출**: Functional 10개 내외 + Non-functional 5개 내외
 2. **[EX-2] Raw QAS 발굴 → 통합**: (Step5) 브레인스토밍 15개 내외 → (Step6) 통합·정제 8개 이상
@@ -86,13 +88,13 @@
 3. **[EX-3] 우선순위화 + Refinement**: (Step7) 투표 → (Step8) 6요소 명세 `Source/Stimulus/Artifact/Environment/Response/Measure`
    > ⚠️ 여기서 **4.3의 Design Approach 4주제에 대응하는 QAS를 미리 심어라**: 멀티 OS(이식성) · 사용자 급증(확장성) · 백업·복구(가용성) · 통신 유출 차단(보안). 여기에 Graceful Degradation·데이터 일관성 QAS도 포함.
 
-#### Phase 2. OOAD 실습 (4.2) — System Overview(2장) 재료
+#### [Phase 2. OOAD 실습 (4.2)](단계별_가이드/02_OOAD.md) — System Overview(2장) 재료
 1. **[EX-1] Actor 도출** + Description
 2. **[EX-2] Use Case Model** → **Use Case Diagram**
 3. **[EX-3] UC 명세서**: UC 2~3개 선택, Basic Flow 중심 (optional: Sequence Diagram)
    - 선택 팁: 핵심 흐름(주문 생성→결제→접수→제조완료→픽업알림)을 고를 것
 
-#### Phase 3. 아키텍처 설계 실습 (4.3) — ★ Architecture Design 45%
+#### [Phase 3. 아키텍처 설계 실습 (4.3)](단계별_가이드/03_아키텍처설계.md) — ★ Architecture Design 45%
 1. **[EX-1] Design Decision List**: 요구사항 중요도 평가(QA는 4.1 [EX-3] 결과 반영) → 드라이버 식별(ADD Step3) → 추상화 → DDL 작성 → ISO25010 리뷰 → QA Mapping → 확정 → 발표
 2. **[EX-2~5] Design Approach 4종** — 각각 `Design Goal → Design Approach → Design Decision & Rationale → 발표 → Review`:
 
@@ -103,14 +105,14 @@
    | EX-4 | 데이터 백업·복구 | 가용성·신뢰성 | 주기적 백업, 이력/감사 로그, 복구 절차 |
    | EX-5 | 통신 데이터 유출 차단 | 보안 | TLS/HTTPS, 민감정보 미저장, 마스킹, RBAC |
 
-#### Phase 4. Design Patterns 실습 (4.4) — 설계 타당성 심화
+#### [Phase 4. Design Patterns 실습 (4.4)](단계별_가이드/04_디자인패턴.md) — 설계 타당성 심화
 1. [ ] 변경 가능성 높은 기능 1개 선택 (예: 결제수단 추가, 외부 결제사 변경, 알림 채널 추가, 주문상태 추가)
 2. [ ] Design Approach 대안 2~3개 (직접구현 / 단일 GoF / 복합·구조분리)
 3. [ ] 비교표: 적용 패턴 · 장점 · 단점 · 변경 영향 · 관련 QA
 4. [ ] 최종 선택 + 선택 이유·trade-off / (필요 시) Class Diagram
    - 후보 패턴: Strategy, Adapter, Facade, State, Observer, Command, Builder, Decorator, Factory Method
 
-#### Phase 5. (개인) 🎓 인증과제 보고서로 통합
+#### [Phase 5. (개인) 🎓 인증과제 보고서로 통합](단계별_가이드/05_통합.md)
 - [ ] 📝 Phase 1~4 산출물을 B-1 배점표에 맞춰 4개 챕터로 재배치
 - [ ] **추적성 사슬 최종 점검** + 4개 정성 기준 자가 리뷰
 
